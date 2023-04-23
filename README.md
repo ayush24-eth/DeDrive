@@ -1,2 +1,2 @@
 # De Drive
-## Decentralised Drive
+## Decentralized Drive
