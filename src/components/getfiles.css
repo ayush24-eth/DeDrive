@@ -1,0 +1,29 @@
+.inputContainer {
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.filesContainer {
+    background-color: #121212;
+}
+input {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color:#FFFFFF;
+    font-weight:inherit;
+}
+
+input::file-selector-button {
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 0.6rem;
+    border: thin solid white;
+    border-radius: 5px;
+    background-color: transparent;
+}
