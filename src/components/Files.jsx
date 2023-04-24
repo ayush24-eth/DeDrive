@@ -17,8 +17,8 @@ const Files = () => {
 
   const getAllFiles = async () => {
     try {
-      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
-      // const contractAddress = process.env.CONTRACT_ADDRESS;
+      // const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
+      const contractAddress = process.env.CONTRACT_ADDRESS;
       const contractABI = abi.abi;
       const { ethereum } = window;
       if (ethereum) {

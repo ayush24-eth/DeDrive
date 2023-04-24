@@ -3,8 +3,8 @@ import abi from "../contracts/Drive.json";
 
 const uploadfile = async (props) => {
   try {
-    const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
-    // const contractAddress = process.env.CONTRACT_ADDRESS;
+    // const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
+    const contractAddress = process.env.CONTRACT_ADDRESS;
     const contractABI = abi.abi;
     // console.log('abi', contractABI);
     const { ethereum } = window;
