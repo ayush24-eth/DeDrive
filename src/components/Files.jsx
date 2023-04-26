@@ -17,8 +17,8 @@ const Files = () => {
 
   const getAllFiles = async () => {
     try {
-      // const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
-      const contractAddress = process.env.CONTRACT_ADDRESS;
+      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
+      // const contractAddress = process.env.CONTRACT_ADDRESS;
       const contractABI = abi.abi;
       const { ethereum } = window;
       if (ethereum) {
@@ -65,7 +65,18 @@ const Files = () => {
     <div className="filesContainer">
       {currentAccount === "" ? (
         <div className="noFiles">
-          <p>Connect your Wallet</p>
+          <p>Download Metamask Extension from <a 
+              href = "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">
+              here</a>
+          </p>
+          <p>Create New Wallet and password</p>
+          <p>Secure your wallet</p>
+          <p>Copy your secret phrase store it safely</p>
+          <p>Click on "Ethereum Mainet" and then "show/hide test network"</p>
+          <p>Select Sepolia Testnet</p>
+          <p>Copy your wallet address</p>
+          <p>Get some Sepolia Eth from <a href = "https://sepoliafaucet.com/"> here </a> after signing up in website</p>
+          <p>Paste the address and boom you are reday to use De Drive</p>
         </div>
       ) : (
         <TableContainer component={Paper}>

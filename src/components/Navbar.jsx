@@ -8,7 +8,8 @@ import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import Chip from "@mui/material/Chip";
 import Button from "@mui/material/Button";
-import StorageSharpIcon from "@mui/icons-material/StorageSharp";
+import logo from '../assets/logo.png';
+import "./getfiles.css";
 import Roboto from '@fontsource/roboto/500.css?inline';
 import MM from "../assets/metamask-icon.png";
 import { useAccount } from '../context/AccountContext';
@@ -81,7 +82,7 @@ const Navbar = () => {
     <AppBar sx={{ backgroundColor: "#2c2c2d", elevation:"8dp"}}>
       <Container className="container" maxWidth="xl">
         <Toolbar disableGutters>
-          <StorageSharpIcon sx={{ mr: 1 }} />
+          <a class="navbar-brand" href="#"><img src= {logo} alt="Logo" /></a>
           <Typography
             variant="h5"
             component="a"

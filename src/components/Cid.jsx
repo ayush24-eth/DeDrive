@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import uploadfile from './Uploadtxn.js';
 import { useStorageUpload } from "@thirdweb-dev/react";
+import { useAccount } from "../context/AccountContext";
 import './getfiles.css';
 
 
@@ -12,6 +13,7 @@ const Cid = () => {
   const [file, setFile] = useState({});
   const [details, setDetails] = useState({fileName:"", fileSize:0, cid:""});
   const [btnstate, setBtnstate] = useState(true);
+  const [currentAccount, setCurrentAccount] = useAccount();
 
   // const changeHandler = async (event) => {
   //   const temp = event.target.files[0];
@@ -76,25 +78,27 @@ const Cid = () => {
 
   return (
     <>
-      <div className="inputContainer">
-      <ThemeProvider theme={theme}>
-      <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
-        <input
-          placeholder="Select File"
-          className="textInput"
-          type="file"
-          name="file"
-          onChange={changeHandler}
-        />
-          <div>
-            {(btnstate) ?
-              <Button variant="contained" onClick={uploadFile}>Upload</Button> :
-              <Button  color="inherit" variant="outlined" onClick={callAlert}>Upload</Button>
-            }
-          </div>
-        </Stack>
-        </ThemeProvider>
-      </div>
+      {currentAccount === "" ? ("") : (
+        <div className="inputContainer">
+        <ThemeProvider theme={theme}>
+        <Stack direction="row" spacing={2} justifyContent="center" alignItems="center">
+          <input
+            placeholder="Select File"
+            className="textInput"
+            type="file"
+            name="file"
+            onChange={changeHandler}
+          />
+            <div>
+              {(btnstate) ?
+                <Button variant="contained" onClick={uploadFile}>Upload</Button> :
+                <Button  color="inherit" variant="outlined" onClick={callAlert}>Upload</Button>
+              }
+            </div>
+          </Stack>
+          </ThemeProvider>
+        </div>
+      )}
     </>
   );
 };
