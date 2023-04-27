@@ -64,19 +64,31 @@ const Files = () => {
   return (
     <div className="filesContainer">
       {currentAccount === "" ? (
-        <div className="noFiles">
-          <p>Download Metamask Extension from <a 
-              href = "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">
-              here</a>
-          </p>
-          <p>Create New Wallet and password</p>
-          <p>Secure your wallet</p>
-          <p>Copy your secret phrase store it safely</p>
-          <p>Click on "Ethereum Mainet" and then "show/hide test network"</p>
-          <p>Select Sepolia Testnet</p>
-          <p>Copy your wallet address</p>
-          <p>Get some Sepolia Eth from <a href = "https://sepoliafaucet.com/"> here </a> after signing up in website</p>
-          <p>Paste the address and boom you are reday to use De Drive</p>
+        // <div className="noFiles">
+        //   <p>Download Metamask Extension from <a 
+        //       href = "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">
+        //       here</a>
+        //   </p>
+        //   <p>Create New Wallet and password</p>
+        //   <p>Secure your wallet</p>
+        //   <p>Copy your secret phrase store it safely</p>
+        //   <p>Click on "Ethereum Mainet" and then "show/hide test network"</p>
+        //   <p>Select Sepolia Testnet</p>
+        //   <p>Copy your wallet address</p>
+        //   <p>Get some Sepolia Eth from <a href = "https://sepoliafaucet.com/"> here </a> after signing up in website</p>
+        //   <p>Paste the address and boom you are reday to use De Drive</p>
+        // </div>
+        <div className="video-container">
+        <div className="video-wrapper">
+          <iframe width="700" height="395" 
+                  src="https://www.youtube.com/embed/UbzGaWCLHUU" 
+                  title="YouTube video player" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen
+          ></iframe>
+        </div>
+          <p> Metamask <a href = "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">Link</a></p>
+          <p>Sepolia Faucet <a href = "https://sepoliafaucet.com/"> Link </a> </p>
         </div>
       ) : (
         <TableContainer component={Paper}>
