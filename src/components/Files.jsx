@@ -103,8 +103,8 @@ const Files = () => {
               <TableRow>
                 <TableCell>Sl&nbsp;No.</TableCell>
                 <TableCell>Name</TableCell>
-                <TableCell align="left">Upload&nbsp;Date</TableCell>
                 <TableCell align="left">File&nbsp;Size</TableCell>
+                <TableCell align="left">Upload&nbsp;Date</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
